@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="goods">
+	<resultMap id="goodsInfo" class="com.hchen.model.GoodsInfo">
+		<result column="goods_id" property="goodsId" jdbcType="INTEGER" />
+		<result column="goods_name" property="goodsName" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<select id="findGoodsInfo" resultMap="goodsInfo"
+		parameterClass="long">
+		select goods_id, goods_name 
+		from jeehe_goods
+		limit 10
+	</select>
+
+</sqlMap>

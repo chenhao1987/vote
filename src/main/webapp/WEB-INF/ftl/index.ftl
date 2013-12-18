@@ -1,1 +1,1 @@
-hello,${w}
+hello ${GoodsList}
